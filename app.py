@@ -18,7 +18,7 @@ def predict():
     features = [int(x) for x in request.form.values()]
 
     print(features)
-    final = np.array(features).reshape((1,6))
+    final = np.array(features).reshape((1,-1))
     print(final)
     pred = model.predict(final)[0]
     print(pred)
